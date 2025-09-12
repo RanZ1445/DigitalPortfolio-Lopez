@@ -21,16 +21,14 @@
     When collapsed the header slides up smoothly and only the small toggle remains visible.
   -->
   <header id="siteHeader" class="site-header" role="banner" aria-label="Main header">
-    <div class="nav-inner container">
-      <!-- LEFT: profile avatar + site name (replace the src below with your avatar) -->
-      <div class="left-group">
-        <!-- CHANGE: replace src with assets/your-avatar.png (recommended square) -->
-        <img class="brand-avatar" src="data:image/svg+xml;utf8,
-          <svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><rect width='48' height='48' rx='8' fill='%23ffd54f'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Poppins' font-size='18' fill='%23000'>JD</text></svg>"
-             alt="Brand avatar / profile" />
+  <div class="nav-inner container">
+    <!-- LEFT: profile avatar + site name -->
+    <div class="left-group">
+	<!-- CHANGE: replace src with your actual profile image in assets -->
+		<img class="brand-avatar" src="./assets/pfp.png" alt="Brand avatar / profile" />
 
-        <div class="brand-title">My Digital Portfolio</div>
-      </div>
+		<div class="brand-title">My Digital Portfolio</div>
+	</div>
 
       <!-- CENTER: main links -->
       <nav class="main-nav" role="navigation" aria-label="Main navigation">
@@ -39,22 +37,22 @@
           <li><a href="#about">About Me</a></li>
           <li><a href="#achievements">Achievements</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="experiments.html">Experiments</a></li>
+          <li><a href="#experiments">Experiments</a></li>
           <li><a href="#members">Meet the Team</a></li>
           <li><a href="#contact">Contacts</a></li>
         </ul>
       </nav>
 
-      <!-- RIGHT: Socials (also included in Contacts) -->
+      
       <div class="nav-socials">
-        <!-- CHANGE: replace href with your profile links -->
+       
         <a class="nav-social" href="https://www.facebook.com/rance.lopez.313" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook"></i></a>
-        <a class="nav-social" href="https://discord.com/users/yourid" target="_blank" rel="noopener" title="Discord"><i class="fab fa-discord"></i></a>
+        <a class="nav-social" href="https://discord.com/users/@l1gm4_b4ll59575" target="_blank" rel="noopener" title="Discord"><i class="fab fa-discord"></i></a>
       </div>
     </div>
 
     <!-- Header toggle (bottom-left) -->
-    <!-- The characters used are '^' and '˅' (not the letter 'V'); they follow the header animation. -->
+   
     <button id="toggleNavbar" class="header-toggle" aria-controls="siteHeader" aria-expanded="true" title="Toggle navigation">^</button>
   </header>
 
@@ -66,7 +64,7 @@
          Example: <section class="hero" id="home" data-bg="assets/your-hero-bg.jpg">
          The background will scroll with the page (not fixed).
     -->
-    <section id="home" class="section hero" data-bg="Assets/Mataura.png">
+    <section id="home" class="section hero" data-bg="">
       <div class="container hero-inner">
         <!-- NOTE: profile pic & site title were moved into nav to prevent extra top spacing (as you requested). -->
         <h1 class="hero-title">Welcome to My Digital Portfolio</h1>
@@ -75,22 +73,21 @@
     </section>
 
     <!-- ABOUT
-         - Replace the about-avatar src with your profile picture (assets/your-profile.png)
-         - Edit text and 'role' below
-    -->
-    <section id="about" class="section" data-bg="">
-      <div class="container about-grid">
-        <div class="about-avatar">
-          <!-- CHANGE: replace with your photo in assets/ (recommended 300x300) -->
-          <img src="data:image/svg+xml;utf8,
-            <svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='200' height='200' rx='12' fill='%23eef2ff'/><circle cx='100' cy='70' r='40' fill='%23cbd5e1'/></svg>"
-               alt="About profile placeholder">
-        </div>
+     - Replace the about-avatar src with your profile picture (assets/your-profile.png)
+     - Edit text and 'role' below
+	-->
+	<section id="about" class="section" data-bg="">
+	<div class="container about-grid">
+		<div class="about-avatar">
+		<!-- CHANGE: replace with your photo in assets/ (recommended ~300x300) -->
+      <img src="./Assets/PFP.png" alt="About profile picture">
+    </div>
+
 
         <div class="about-text">
           <h2>About Me</h2>
           <p class="role"><strong>Role:</strong> Grade 12 — Physics Student</p>
-          <p>Hello — I'm <strong>[Your Name]</strong>. I like building experiments, working with teams, and documenting results here.</p>
+          <p>Hello — I'm <strong>Rance Gabrielle E. Lopez</strong>. A grade 12 STEM student currently enrolled at Cebu Institute of Technology University and the cracker of Group 5, VIBE TRIBE. I am 16 years old and always willing to lend a helping hand.</p>
         </div>
       </div>
     </section>
@@ -101,9 +98,9 @@
         <h2>Achievements</h2>
         <ul class="achievements-list">
           <!-- CHANGE: add your achievements -->
-          <li>Physics Quiz Bee — 2nd Place (2025)</li>
-          <li>Top Research Presentation — School Fair</li>
-          <li>Science Club — Active Member</li>
+          <li>MTAP — 4th Runner Up (2016)</li>
+          <li>Best Capstone Research — Capstone Reseach Project (2024)</li>
+          <li>2nd Placer SCC Science Fair — Science  Fair (2023)</li>
         </ul>
       </div>
     </section>
@@ -114,27 +111,27 @@
          - Cards have a hover scale effect (slight enlargement).
          - To add more: copy one <a class="experiment-card"> block and change href & image.
     -->
-    <section id="experiments-preview" class="section">
+    <section id="experiments" class="section">
       <div class="container">
-        <h2>Experiments (Preview)</h2>
+        <h2>Experiments</h2>
 
         <div class="carousel-wrap">
           <button class="carousel-btn left" data-target="experimentsCarousel" aria-label="Scroll left">‹</button>
 
           <div id="experimentsCarousel" class="carousel" role="list">
             <!-- EXAMPLE CARD: replace src with assets/experiment1.svg -->
-            <a class="carousel-card experiment-card" href="experiments.html#exp1" role="listitem">
-              <img src="assets/experiment1.svg" alt="Experiment 1 (SVG)">
+            <a class="carousel-card experiment-card" href="experiment1.html" role="listitem">
+              <img src="assets/experiment1.pdf" alt="Experiment 1 (PDF)">
               <h3>Experiment 1</h3>
             </a>
 
-            <a class="carousel-card experiment-card" href="experiments.html#exp2" role="listitem">
-              <img src="assets/experiment2.svg" alt="Experiment 2 (SVG)">
+            <a class="carousel-card experiment-card" href="experiment2.html" role="listitem">
+              <img src="assets/experiment2.pdf" alt="Experiment 2 (PDF)">
               <h3>Experiment 2</h3>
             </a>
 
             <a class="carousel-card experiment-card" href="experiments.html#exp3" role="listitem">
-              <img src="assets/experiment3.svg" alt="Experiment 3 (SVG)">
+              <img src="assets/PLACE HOLDER.png" alt="Experiment 3 (SVG)">
               <h3>Experiment 3</h3>
             </a>
 
@@ -164,32 +161,32 @@
           <div id="projectsScroll" class="hscroll" role="list" tabindex="0">
             <!-- PROJECT CARD: change image src to assets/projectX-slide.png -->
             <article class="hcard project-card" role="listitem">
-              <img src="assets/project1-slide.png" alt="Project 1">
-              <h4>Project 1</h4>
+              <img src="assets/p1.png" alt="Project 1">
+              <h4>Anonymous Forums for Students - Capstone</h4>
             </article>
 
             <article class="hcard project-card" role="listitem">
-              <img src="assets/project2-slide.png" alt="Project 2">
-              <h4>Project 2</h4>
+              <img src="assets/p2.jpg" alt="Project 2">
+              <h4>Exo Armor Cosplay - Personal Project</h4>
             </article>
 
             <article class="hcard project-card" role="listitem">
-              <img src="assets/project3-slide.png" alt="Project 3">
-              <h4>Project 3</h4>
+              <img src="assets/p3.png" alt="Project 3">
+              <h4>Circle Midpoint Finder - Math10 Project</h4>
             </article>
 
             <article class="hcard project-card" role="listitem">
-              <img src="assets/project4-slide.png" alt="Project 4">
-              <h4>Project 4</h4>
+              <img src="assets/p4.png" alt="Project 4">
+              <h4>Wings for Folk Dance - PEH10 Project</h4>
             </article>
 			
 			<article class="hcard project-card" role="listitem">
-              <img src="assets/project4-slide.png" alt="Project 4">
+              <img src="assets/PLACE HOLDER.png" alt="Project 4">
               <h4>Project 5</h4>
             </article>
 			
 			<article class="hcard project-card" role="listitem">
-              <img src="assets/project4-slide.png" alt="Project 4">
+              <img src="assets/PLACE HOLDER.png" alt="Project 4">
               <h4>Project 5</h4>
             </article>
 			
@@ -214,42 +211,41 @@
         <div class="members-grid">
           <!-- MEMBER 1 -->
           <div class="member-card">
-            <div class="member-role-title">Leader</div>
-            <!-- CHANGE: replace src with actual member face image -->
-            <img class="member-face" src="assets/member1.png" alt="Member 1">
+            <div class="member-role-title">TABAS, CLESTER ANDRE</div>
+            <img class="member-face" src="assets/skipper.png" alt="Member 1">
             <button class="toggle-role" aria-expanded="false">Show role</button>
             <div class="role-description">
-              <p><strong>Leader</strong> — Guides the team, organizes schedules and ensures tasks are completed.</p>
+              <p><strong>Skipper</strong> — Leads the group and directs the flow of the experiment or lab work.</p>
             </div>
           </div>
 
           <!-- MEMBER 2 -->
           <div class="member-card">
-            <div class="member-role-title">Researcher</div>
-            <img class="member-face" src="assets/member2.png" alt="Member 2">
+            <div class="member-role-title">VERGARA, MARIA LOURDES</div>
+            <img class="member-face" src="assets/digger.png" alt="Member 2">
             <button class="toggle-role" aria-expanded="false">Show role</button>
             <div class="role-description">
-              <p><strong>Researcher</strong> — Gathers materials and data for experiments.</p>
+              <p><strong>Digger</strong> — Researches and gathers relevant information to support the group’s tasks.</p>
             </div>
           </div>
 
           <!-- MEMBER 3 -->
           <div class="member-card">
-            <div class="member-role-title">Writer</div>
-            <img class="member-face" src="assets/member3.png" alt="Member 3">
+            <div class="member-role-title">WATIN, CHRIS EDEZZAH</div>
+            <img class="member-face" src="assets/scribe.png" alt="Member 3">
             <button class="toggle-role" aria-expanded="false">Show role</button>
             <div class="role-description">
-              <p><strong>Writer</strong> — Drafts the report and documents results clearly.</p>
+              <p><strong>Scribe</strong> — Documents all data and observations, acting as the group’s official recorder..</p>
             </div>
           </div>
 
           <!-- MEMBER 4 -->
           <div class="member-card">
-            <div class="member-role-title">Presenter</div>
-            <img class="member-face" src="assets/member4.png" alt="Member 4">
+            <div class="member-role-title">LOPEZ, RANCE GABRIELLE</div>
+            <img class="member-face" src="assets/cracker.png" alt="Member 4">
             <button class="toggle-role" aria-expanded="false">Show role</button>
             <div class="role-description">
-              <p><strong>Presenter</strong> — Presents the team's work and leads demonstrations.</p>
+              <p><strong>Cracker</strong> — Solves problems, assists teammates in understanding concepts, and handles calculations.</p>
             </div>
           </div>
         </div>
@@ -265,15 +261,15 @@
         <h2>Contacts</h2>
         <p><strong>Email:</strong> <a href="mailto:rancelopez6@gmail.com">rancelopez6@gmail.com</a></p>
         <p><strong>Facebook:</strong> <a href="https://www.facebook.com/rance.lopez.313" target="_blank" rel="noopener">Rance Lopez</a></p>
-        <p><strong>Discord:</strong> <a href="https://discord.com/users/yourid" target="_blank" rel="noopener">yourDiscord#0000</a></p>
+        <p><strong>Discord:</strong> <a href="https://discord.com/users/@l1gm4_b4ll59575" target="_blank" rel="noopener">RANZ1445</a></p>
         <p><strong>Phone 1:</strong> <a href="tel:+639667704391">+63 966 770 4391</a></p>
         <p><strong>Phone 2:</strong> <a href="tel:+639761831262">+63 976 183 1262</a></p>
 
         <div style="margin-top:14px;">
           <!-- clickable icon buttons (also hover-scale) -->
           <a class="contact-social social-link" href="https://www.facebook.com/rance.lopez.313" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-          <a class="contact-social social-link" href="https://discord.com/users/yourid" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord</a>
-          <a class="contact-social" href="mailto:your.email@example.com"><i class="fa fa-envelope"></i> Gmail</a>
+          <a class="contact-social social-link" href="https://discord.com/users/@l1gm4_b4ll59575" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord</a>
+          <a class="contact-social" href="mailto:rancelopez6@gmail.com"><i class="fa fa-envelope"></i> Gmail</a>
         </div>
       </div>
     </section>

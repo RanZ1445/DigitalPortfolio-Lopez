@@ -57,10 +57,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Member role toggle functionality
-  if (memberCards.length > 0) {
-    // Close all role descriptions
-    const closeAllRoles = () => {
+ // ======================
+// Member role toggle functionality
+// ======================
+if (memberCards.length > 0) {
+  memberCards.forEach(card => {
+    const btn = card.querySelector('.toggle-role');
+    const desc = card.querySelector('.role-description');
+    
+    if (!btn || !desc) return;
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      const isOpen = desc.classList.contains('open');
+
+      if (isOpen) {
+        // Close this one
+        desc.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = 'Show role';
+      } else {
+        // Close others
+        memberCards.forEach(otherCard => {
+          const otherDesc = otherCard.querySelector('.role-description');
+          const otherBtn = otherCard.querySelector('.toggle-role');
+          if (otherDesc && otherDesc !== desc) otherDesc.classList.remove('open');
+          if (otherBtn && otherBtn !== btn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            otherBtn.textContent = 'Show role';
+          }
+        });
+
+        // Open this one
+        desc.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        btn.textContent = 'Hide role';
+      }
+    });
+  });
+
+  // Close all roles when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.member-card')) {
       memberCards.forEach(card => {
         const desc = card.querySelector('.role-description');
         const btn = card.querySelector('.toggle-role');
@@ -70,40 +109,24 @@ document.addEventListener('DOMContentLoaded', () => {
           btn.textContent = 'Show role';
         }
       });
-    };
+    }
+  });
 
-    // Set up click handlers for each member card
-    memberCards.forEach(card => {
-      const btn = card.querySelector('.toggle-role');
-      const desc = card.querySelector('.role-description');
-      
-      if (!btn || !desc) return;
-
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isOpen = desc.classList.contains('open');
-        
-        if (isOpen) {
-          desc.classList.remove('open');
+  // Close with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      memberCards.forEach(card => {
+        const desc = card.querySelector('.role-description');
+        const btn = card.querySelector('.toggle-role');
+        if (desc) desc.classList.remove('open');
+        if (btn) {
           btn.setAttribute('aria-expanded', 'false');
           btn.textContent = 'Show role';
-        } else {
-          closeAllRoles();
-          desc.classList.add('open');
-          btn.setAttribute('aria-expanded', 'true');
-          btn.textContent = 'Hide role';
         }
       });
-    });
-
-    // Close all roles when clicking outside
-    document.addEventListener('click', () => closeAllRoles());
-
-    // Close with Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeAllRoles();
-    });
-  }
+    }
+  });
+}
 
   // Apply background images from data-bg attributes
   document.querySelectorAll('[data-bg]').forEach(section => {
@@ -130,6 +153,7 @@ window.addEventListener('load', () => {
     }
   }
 });
+
 /* ===========================
    DYNAMIC POLYGON BACKGROUND
    =========================== */

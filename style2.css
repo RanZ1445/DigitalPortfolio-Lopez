@@ -1,0 +1,49 @@
+/* Set background and text color for the entire page */
+body {
+  background-color: #0a192f; /* darker blue background */
+  color: #e6f1ff; /* lighter text color for better contrast */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Experiment Pages */
+.experiment-detail {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #232f4f;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.2);
+  text-align: center;
+  color: #e6f1ff; /* lighter text for better contrast */
+}
+
+.experiment-detail h2 {
+  margin-bottom: 20px;
+  color: #e6f1ff; /* lighter text for headings */
+}
+
+/* Style for PDF container */
+.experiment-detail iframe {
+  border: 2px solid #1e3a5f; /* darker blue border */
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(2,6,23,0.08);
+}
+
+/* Back button */
+.btn-back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background: #1e3a5f; /* darker blue background */
+  color: #e6f1ff; /* lighter text */
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn-back:hover {
+  transform: scale(1.05);
+  background: #274060; /* slightly lighter blue on hover */
+  color: #ffffff;
+}
