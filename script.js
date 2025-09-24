@@ -1,9 +1,4 @@
-/**
- * Simplified and optimized script.js
- * - Reduced complexity while maintaining functionality
- * - Better performance with fewer DOM queries
- * - Simplified event handling
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // Cache DOM elements
